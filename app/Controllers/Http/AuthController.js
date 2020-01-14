@@ -11,7 +11,6 @@ class AuthController {
   async callback({ ally, response }) {
     try {
       const fbUser = await ally.driver('facebook').getUser()
-      console.log(fbUser)
       // user details to be saved
       const userDetails = {
         email        : fbUser.getEmail(),
